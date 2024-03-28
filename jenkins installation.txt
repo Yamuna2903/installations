@@ -1,20 +1,19 @@
 based on ubuntu22.04:
 -------------------
 
-	sudo apt update
-	sudo apt install default-jdk
-	wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key |sudo gpg --dearmor -o /usr/share/keyrings/jenkins.gpg
-
-	sudo sh -c 'echo deb [signed-by=/usr/share/keyrings/jenkins.gpg] http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt update
+sudo apt install default-jdk
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key |sudo gpg --dearmor -o /usr/share/keyrings/jenkins.gpg
+sudo sh -c 'echo deb [signed-by=/usr/share/keyrings/jenkins.gpg] http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 
 sudo apt update
 sudo apt install jenkins
 sudo systemctl start jenkins.service
 sudo systemctl status jenkins
   
-   open expose port 8080
-  http://your_server_ip_or_domain:8080
-  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+open expose port 8080
+http://your_server_ip_or_domain:8080
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 
 
