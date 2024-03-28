@@ -47,7 +47,7 @@ pipeline
 
 pipeline {
     environment {
-        registry = "cvaa/inspired"
+        registry = "yamuna2903/inspired"
         registryCredential = 'dockerhub_cred'
         dockerImage = ''
         mvnHome = tool name: 'm3', type: 'maven'
@@ -58,7 +58,7 @@ pipeline {
     stages {
         stage('Cloning Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/Cvaaaa/java-world.git'
+                git branch: 'main', url: 'https://github.com/yamuna2903/java-world.git'
             }
         }
         stage('Build'){
